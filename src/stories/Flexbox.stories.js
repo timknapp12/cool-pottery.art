@@ -7,13 +7,23 @@ export default {
 };
 
 export const Default = () => (
-  <Flexbox style={{ background: "aliceblue", height: "4rem" }}>
+  <Flexbox style={{ background: "aliceblue" }}>Hello Flexbox</Flexbox>
+);
+
+export const AddHeight = () => (
+  <Flexbox height="4rem" style={{ background: "aliceblue" }}>
+    Hello Flexbox
+  </Flexbox>
+);
+
+export const AddWidth = () => (
+  <Flexbox width="70%" style={{ background: "aliceblue" }}>
     Hello Flexbox
   </Flexbox>
 );
 
 export const DefaultWithTwoChildren = () => (
-  <Flexbox style={{ background: "aliceblue", height: "4rem" }}>
+  <Flexbox height="4rem" style={{ background: "aliceblue" }}>
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
     </span>
@@ -25,8 +35,9 @@ export const DefaultWithTwoChildren = () => (
 
 export const AlignItemsFlexStart = () => (
   <Flexbox
+    height="4rem"
     alignItems="flex-start"
-    style={{ background: "aliceblue", height: "4rem" }}
+    style={{ background: "aliceblue" }}
   >
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
@@ -36,8 +47,9 @@ export const AlignItemsFlexStart = () => (
 
 export const JustifyContentFlexStart = () => (
   <Flexbox
+    height="4rem"
     justifyContent="flex-start"
-    style={{ background: "aliceblue", height: "4rem" }}
+    style={{ background: "aliceblue" }}
   >
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
@@ -47,9 +59,10 @@ export const JustifyContentFlexStart = () => (
 
 export const FlexEndForBoth = () => (
   <Flexbox
+    height="4rem"
     justifyContent="flex-end"
     alignItems="flex-end"
-    style={{ background: "aliceblue", height: "4rem" }}
+    style={{ background: "aliceblue" }}
   >
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
@@ -62,8 +75,9 @@ export const FlexEndForBoth = () => (
 
 export const SpaceBetween = () => (
   <Flexbox
+    height="4rem"
     justifyContent="space-between"
-    style={{ background: "aliceblue", height: "4rem" }}
+    style={{ background: "aliceblue" }}
   >
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
@@ -76,9 +90,9 @@ export const SpaceBetween = () => (
 
 export const DirectionColumn = () => (
   <Flexbox
+    height="4rem"
     flexDirection="column"
-    // justifyContent="space-between"
-    style={{ background: "aliceblue", height: "4rem" }}
+    style={{ background: "aliceblue" }}
   >
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯

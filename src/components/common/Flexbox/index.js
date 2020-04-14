@@ -7,12 +7,16 @@ const Flex = styled.div`
   flex-direction: ${({ flexDirection }) => flexDirection};
   justify-content: ${({ justifyContent }) => justifyContent};
   align-items: ${({ alignItems }) => alignItems};
+  height: ${({ height }) => height};
+  width: ${({ width }) => width};
 `;
 
 const Flexbox = ({
   justifyContent = "center",
   alignItems = "center",
   flexDirection = "row",
+  height = "auto",
+  width = "auto",
   children,
   ...props
 }) => (
@@ -20,6 +24,8 @@ const Flexbox = ({
     justifyContent={justifyContent}
     alignItems={alignItems}
     flexDirection={flexDirection}
+    height={height}
+    width={width}
     {...props}
   >
     {children}
@@ -38,6 +44,12 @@ Flexbox.propTypes = {
 
   /** A valid CSS property for flex direction */
   flexDirection: PropTypes.string,
+
+  /** A valid CSS property for height */
+  height: PropTypes.string,
+
+  /** A valid CSS property for width */
+  width: PropTypes.string,
 };
 
 export default Flexbox;
