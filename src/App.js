@@ -1,11 +1,12 @@
 import React from "react";
+import Flexbox from "./components/common/Flexbox";
 
 function App() {
   return (
-    <div>
+    <Flexbox height="150px">
       Welcome to Cool Pottery. This site is under construction. Come back and
       see us soon! Or send an email to coolpottery.art@gmail.com
-    </div>
+    </Flexbox>
   );
 }
 
