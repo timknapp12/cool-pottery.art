@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Grid from "../index";
+import Grid from "./index";
 import { render } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 
