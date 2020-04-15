@@ -1,9 +1,9 @@
 import React from "react";
-import Grid from "../components/common/Grid";
+import Grid from "../components/Grid";
 import styled from "styled-components";
 
 const Block = styled.div`
-  height: 100px;
+  height: 6.25rem;
   background: lavender;
 `;
 

@@ -1,5 +1,14 @@
 import React from "react";
-import Flexbox from "../components/common/Flexbox";
+import Flexbox from "../components/Flexbox";
+import {
+  mainBlue,
+  lightBlue,
+  middleBlue,
+  warn,
+  danger,
+  success,
+  black,
+} from "../components/colors";
 
 export default {
   title: "Flexbox",
@@ -7,23 +16,23 @@ export default {
 };
 
 export const Default = () => (
-  <Flexbox style={{ background: "aliceblue" }}>Hello Flexbox</Flexbox>
+  <Flexbox style={{ background: mainBlue }}>Hello Flexbox</Flexbox>
 );
 
 export const AddHeight = () => (
-  <Flexbox height="4rem" style={{ background: "aliceblue" }}>
+  <Flexbox height="4rem" style={{ background: lightBlue }}>
     Hello Flexbox
   </Flexbox>
 );
 
 export const AddWidth = () => (
-  <Flexbox width="70%" style={{ background: "aliceblue" }}>
+  <Flexbox width="70%" style={{ background: middleBlue }}>
     Hello Flexbox
   </Flexbox>
 );
 
 export const DefaultWithTwoChildren = () => (
-  <Flexbox height="4rem" style={{ background: "aliceblue" }}>
+  <Flexbox height="4rem" style={{ background: warn }}>
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
     </span>
@@ -34,11 +43,7 @@ export const DefaultWithTwoChildren = () => (
 );
 
 export const AlignItemsFlexStart = () => (
-  <Flexbox
-    height="4rem"
-    alignItems="flex-start"
-    style={{ background: "aliceblue" }}
-  >
+  <Flexbox height="4rem" alignItems="flex-start" style={{ background: danger }}>
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
     </span>
@@ -49,7 +54,7 @@ export const JustifyContentFlexStart = () => (
   <Flexbox
     height="4rem"
     justifyContent="flex-start"
-    style={{ background: "aliceblue" }}
+    style={{ background: success }}
   >
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
@@ -62,7 +67,7 @@ export const FlexEndForBoth = () => (
     height="4rem"
     justifyContent="flex-end"
     alignItems="flex-end"
-    style={{ background: "aliceblue" }}
+    style={{ background: black }}
   >
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
@@ -77,7 +82,7 @@ export const SpaceBetween = () => (
   <Flexbox
     height="4rem"
     justifyContent="space-between"
-    style={{ background: "aliceblue" }}
+    style={{ background: lightBlue }}
   >
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
@@ -92,7 +97,7 @@ export const DirectionColumn = () => (
   <Flexbox
     height="4rem"
     flexDirection="column"
-    style={{ background: "aliceblue" }}
+    style={{ background: lightBlue }}
   >
     <span role="img" aria-label="so cool">
       😀 😎 👍 💯
