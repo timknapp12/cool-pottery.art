@@ -8,7 +8,9 @@ export default {
 };
 
 export const Default = () => (
-  <Button onClick={action("clicked")}>Hello Button</Button>
+  <Button onClick={action("clicked")}>
+    <p style={{ margin: 0, color: "white" }}>Hello Button</p>
+  </Button>
 );
 
 export const Emojis = () => (
