@@ -8,7 +8,7 @@ import {
   danger,
   success,
   black,
-} from "../components/colors";
+} from "../components/constants";
 
 export default {
   title: "Flexbox",
