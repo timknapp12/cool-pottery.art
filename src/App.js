@@ -1,6 +1,5 @@
 import React from "react";
-import Flexbox from "./components/common/Flexbox";
-
+import Flexbox from "./components/Flexbox";
 function App() {
   return (
     <Flexbox height="150px">
