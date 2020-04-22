@@ -23,11 +23,22 @@ const StyledLink = styled.a`
   }
 `;
 
+const Heading = styled.h1`
+  font-family: "Luckiest Guy", cursive;
+  color: ${white};
+  letter-spacing: 0.1rem;
+  font-size: 10vh;
+  display: block;
+  @media (max-width: 500px) {
+    display: none;
+  }
+`;
+
 const Navbar = ({ items, ...props }) => (
   <StyledNav {...props}>
     <Flexbox height="4rem" justifyContent="space-between">
       <HomeIcon href="/" />
-      <h1>Cool Pottery</h1>
+      <Heading>Cool Pottery</Heading>
       <Flexbox>
         {items.map((item) => (
           <StyledLink
