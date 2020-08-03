@@ -24,13 +24,20 @@ const StyledLink = styled.a`
 `;
 
 const Heading = styled.h1`
-  font-family: "Luckiest Guy", cursive;
+  /* font-family: "Luckiest Guy", cursive; */
+  font-family: Arial, Helvetica, sans-serif;
   color: ${white};
   letter-spacing: 0.1rem;
-  font-size: 10vh;
-  display: block;
-  @media (max-width: 500px) {
-    display: none;
+  display: none;
+  @media (min-width: 580px) {
+    display: block;
+    font-size: 5vh;
+  }
+  @media (min-width: 700px) {
+    font-size: 6.5vh;
+  }
+  @media (min-width: 900px) {
+    font-size: 8vh;
   }
 `;
 
