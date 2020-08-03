@@ -9,7 +9,7 @@ import {
   success,
   white,
   black,
-} from "../components/colors";
+} from "../components/constants";
 import Grid from "../components/Grid";
 
 const Block = styled.div`
