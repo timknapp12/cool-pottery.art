@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Flexbox from "../Flexbox";
 import { mainBlue, white, ButtonText } from "../constants";
 import HomeIcon from "./HomeIcon";
+import NavItems from "./NavItems";
 
 const StyledNav = styled.nav`
   background: ${mainBlue};
@@ -13,24 +14,17 @@ const StyledNav = styled.nav`
   }
 `;
 
-const StyledLink = styled.a`
-  margin-left: 0.5rem;
-  text-decoration: none;
-  color: ${white};
-  opacity: 1;
-  &:hover {
-    opacity: 0.7;
-  }
-`;
-
 const Heading = styled.h1`
   /* font-family: "Luckiest Guy", cursive; */
   font-family: Arial, Helvetica, sans-serif;
   color: ${white};
   letter-spacing: 0.1rem;
   display: none;
-  @media (min-width: 580px) {
+  @media (min-width: 0px) {
     display: block;
+    font-size: 4vh;
+  }
+  @media (min-width: 580px) {
     font-size: 5vh;
   }
   @media (min-width: 700px) {
@@ -46,17 +40,7 @@ const Navbar = ({ items, ...props }) => (
     <Flexbox height="4rem" justifyContent="space-between">
       <HomeIcon href="/" />
       <Heading>Cool Pottery</Heading>
-      <Flexbox>
-        {items.map((item) => (
-          <StyledLink
-            style={{ marginLeft: "1.5rem" }}
-            key={item.name}
-            href={item.href}
-          >
-            <ButtonText>{item.name}</ButtonText>
-          </StyledLink>
-        ))}
-      </Flexbox>
+      <NavItems items={items} />
     </Flexbox>
   </StyledNav>
 );
