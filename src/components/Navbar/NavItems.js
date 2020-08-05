@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Flexbox from "../Flexbox";
 import { ButtonText, white } from "../constants";
@@ -6,6 +6,7 @@ import HamburgerIcon from "./HamburgerIcon";
 
 const Wrapper = styled.div`
   display: flex;
+  position: relative;
 `;
 
 const ResponsiveFlexBox = styled(Flexbox)`
@@ -16,20 +17,21 @@ const ResponsiveFlexBox = styled(Flexbox)`
 `;
 
 const HamburgerMenu = styled.div`
-  width: 12vw;
-  display: flex;
-  justify-content: flex-end;
+  /* width: 12vw; */
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  position: absolute;
+  top: 60;
+  right: 60;
   @media (min-width: 580px) {
     display: none;
   }
 `;
 
-const Dropdown = styled(Flexbox)`
+const Dropdown = styled.div`
+  margin-top: 200px;
   height: 200px;
-  display: none;
-  ${HamburgerMenu}:hover & {
-    display: flex;
-  }
+  z-index: 10;
 `;
 
 const StyledLink = styled.a`
@@ -42,11 +44,29 @@ const StyledLink = styled.a`
   }
 `;
 
-const NavItems = ({ items, ...props }) => (
-  <Wrapper {...props}>
-    <HamburgerMenu>
-      <HamburgerIcon />
-      <Dropdown flexDirection="column">
+const NavItems = ({ items, ...props }) => {
+  const [open, setOpen] = useState(true);
+  const toggleOpen = () => setOpen((state) => !state);
+
+  return (
+    <Wrapper {...props}>
+      <HamburgerMenu>
+        <HamburgerIcon onClick={toggleOpen} />
+        {open && (
+          <Dropdown flexDirection="column">
+            {items.map((item) => (
+              <StyledLink
+                style={{ marginLeft: "1.5rem" }}
+                key={item.name}
+                href={item.href}
+              >
+                <ButtonText>{item.name}</ButtonText>
+              </StyledLink>
+            ))}
+          </Dropdown>
+        )}
+      </HamburgerMenu>
+      <ResponsiveFlexBox>
         {items.map((item) => (
           <StyledLink
             style={{ marginLeft: "1.5rem" }}
@@ -56,20 +76,9 @@ const NavItems = ({ items, ...props }) => (
             <ButtonText>{item.name}</ButtonText>
           </StyledLink>
         ))}
-      </Dropdown>
-    </HamburgerMenu>
-    <ResponsiveFlexBox>
-      {items.map((item) => (
-        <StyledLink
-          style={{ marginLeft: "1.5rem" }}
-          key={item.name}
-          href={item.href}
-        >
-          <ButtonText>{item.name}</ButtonText>
-        </StyledLink>
-      ))}
-    </ResponsiveFlexBox>
-  </Wrapper>
-);
+      </ResponsiveFlexBox>
+    </Wrapper>
+  );
+};
 
 export default NavItems;

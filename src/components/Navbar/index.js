@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Flexbox from "../Flexbox";
-import { mainBlue, white, ButtonText } from "../constants";
+import { mainBlue, white } from "../constants";
 import HomeIcon from "./HomeIcon";
 import NavItems from "./NavItems";
 

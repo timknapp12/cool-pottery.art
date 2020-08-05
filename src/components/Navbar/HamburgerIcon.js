@@ -8,6 +8,8 @@ const HamburgerLogo = styled.img`
   cursor: pointer;
 `;
 
-const HamburgerIcon = () => <HamburgerLogo alt="menu" src={hamburger} />;
+const HamburgerIcon = ({ ...props }) => (
+  <HamburgerLogo {...props} alt="menu" src={hamburger} />
+);
 
 export default HamburgerIcon;
