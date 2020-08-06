@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-import Flexbox from "../Flexbox";
 import { mainBlue, white } from "../constants";
 import HomeIcon from "./HomeIcon";
 import NavItems from "./NavItems";
@@ -9,40 +8,45 @@ const StyledNav = styled.nav`
   background: ${mainBlue};
   padding: 1rem;
   opacity: 0.95;
+  height: 4rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   &:hover {
     opacity: 1;
   }
 `;
 
 const Heading = styled.h1`
-  /* font-family: "Luckiest Guy", cursive; */
   font-family: Arial, Helvetica, sans-serif;
   color: ${white};
   letter-spacing: 0.1rem;
-  display: none;
-  @media (min-width: 0px) {
-    display: block;
-    font-size: 4vh;
-  }
-  @media (min-width: 580px) {
-    font-size: 5vh;
-  }
+  font-size: 6vw;
+  margin: 0;
+  justify-self: center;
+  align-self: center;
+  grid-column: 2/5;
   @media (min-width: 700px) {
-    font-size: 6.5vh;
-  }
-  @media (min-width: 900px) {
-    font-size: 8vh;
+    font-size: 4.5vw;
   }
 `;
 
-const Navbar = ({ items, ...props }) => (
-  <StyledNav {...props}>
-    <Flexbox height="4rem" justifyContent="space-between">
-      <HomeIcon href="/" />
+const IconWrapper = styled.div`
+  justify-self: start;
+  align-self: center;
+`;
+
+const Navbar = ({ items, ...props }) => {
+  const [open, setOpen] = useState(false);
+  const toggleOpen = () => setOpen((state) => !state);
+  return (
+    <StyledNav {...props}>
+      <IconWrapper>
+        <HomeIcon href="/" />
+      </IconWrapper>
       <Heading>Cool Pottery</Heading>
-      <NavItems items={items} />
-    </Flexbox>
-  </StyledNav>
-);
+      <NavItems open={open} toggleOpen={toggleOpen} items={items} />
+    </StyledNav>
+  );
+};
 
 export default Navbar;
