@@ -1,41 +1,39 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import Flexbox from "../Flexbox";
-import { ButtonText, white } from "../constants";
+import { ButtonText, white, mainBlue } from "../constants";
 import HamburgerIcon from "./HamburgerIcon";
 
 const Wrapper = styled.div`
   display: flex;
-  position: relative;
+  justify-self: end;
+  align-self: center;
 `;
 
-const ResponsiveFlexBox = styled(Flexbox)`
+const WideScreenMenuItems = styled(Flexbox)`
   display: none;
   @media (min-width: 580px) {
     display: flex;
   }
 `;
 
-const HamburgerMenu = styled.div`
-  /* width: 12vw; */
-  /* display: flex; */
-  /* justify-content: flex-end; */
-  position: absolute;
-  top: 60;
-  right: 60;
+const HamburgerMenu = styled(Flexbox)`
+  position: relative;
   @media (min-width: 580px) {
     display: none;
   }
 `;
 
-const Dropdown = styled.div`
-  margin-top: 200px;
-  height: 200px;
-  z-index: 10;
+const Dropdown = styled(Flexbox)`
+  position: absolute;
+  border: 1px solid ${white};
+  padding: 4px;
+  top: -10px;
+  right: 30px;
+  background: ${mainBlue};
 `;
 
 const StyledLink = styled.a`
-  margin-left: 0.5rem;
   text-decoration: none;
   color: ${white};
   opacity: 1;
@@ -44,10 +42,7 @@ const StyledLink = styled.a`
   }
 `;
 
-const NavItems = ({ items, ...props }) => {
-  const [open, setOpen] = useState(true);
-  const toggleOpen = () => setOpen((state) => !state);
-
+const NavItems = ({ items, open, toggleOpen, ...props }) => {
   return (
     <Wrapper {...props}>
       <HamburgerMenu>
@@ -55,18 +50,14 @@ const NavItems = ({ items, ...props }) => {
         {open && (
           <Dropdown flexDirection="column">
             {items.map((item) => (
-              <StyledLink
-                style={{ marginLeft: "1.5rem" }}
-                key={item.name}
-                href={item.href}
-              >
+              <StyledLink key={item.name} href={item.href}>
                 <ButtonText>{item.name}</ButtonText>
               </StyledLink>
             ))}
           </Dropdown>
         )}
       </HamburgerMenu>
-      <ResponsiveFlexBox>
+      <WideScreenMenuItems>
         {items.map((item) => (
           <StyledLink
             style={{ marginLeft: "1.5rem" }}
@@ -76,7 +67,7 @@ const NavItems = ({ items, ...props }) => {
             <ButtonText>{item.name}</ButtonText>
           </StyledLink>
         ))}
-      </ResponsiveFlexBox>
+      </WideScreenMenuItems>
     </Wrapper>
   );
 };
