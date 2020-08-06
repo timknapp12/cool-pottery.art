@@ -3,9 +3,14 @@ import styled from "styled-components";
 import logo from "../../assets/cool-pottery.png";
 
 const HomeLogo = styled.img`
-  width: 6rem;
-  height: 4rem;
   cursor: pointer;
+  width: 3rem;
+  @media (min-width: 375px) {
+    width: 4rem;
+  }
+  @media (min-width: 700px) {
+    width: 6rem;
+  }
 `;
 
 const HomeIcon = () => <HomeLogo alt="home" src={logo} />;
