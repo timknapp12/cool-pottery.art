@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Flexbox from "../Flexbox";
+import { Link } from "react-router-dom";
 import { ButtonText, white, mainBlue } from "../constants";
 import HamburgerIcon from "./HamburgerIcon";
 
@@ -33,7 +34,7 @@ const Dropdown = styled(Flexbox)`
   background: ${mainBlue};
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   text-decoration: none;
   color: ${white};
   opacity: 1;
@@ -50,7 +51,7 @@ const NavItems = ({ items, open, toggleOpen, ...props }) => {
         {open && (
           <Dropdown flexDirection="column">
             {items.map((item) => (
-              <StyledLink key={item.name} href={item.href}>
+              <StyledLink to={item.href} key={item.name}>
                 <ButtonText>{item.name}</ButtonText>
               </StyledLink>
             ))}
@@ -60,9 +61,9 @@ const NavItems = ({ items, open, toggleOpen, ...props }) => {
       <WideScreenMenuItems>
         {items.map((item) => (
           <StyledLink
-            style={{ marginLeft: "1.5rem" }}
             key={item.name}
-            href={item.href}
+            to={item.href}
+            style={{ marginLeft: "1.5rem" }}
           >
             <ButtonText>{item.name}</ButtonText>
           </StyledLink>
