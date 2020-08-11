@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { mainBlue, white } from "../constants";
 import HomeIcon from "./HomeIcon";
 import NavItems from "./NavItems";
@@ -41,7 +42,9 @@ const Navbar = ({ items, ...props }) => {
   return (
     <StyledNav {...props}>
       <IconWrapper>
-        <HomeIcon href="/" />
+        <Link to="/">
+          <HomeIcon />
+        </Link>
       </IconWrapper>
       <Heading>Cool Pottery</Heading>
       <NavItems open={open} toggleOpen={toggleOpen} items={items} />
