@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 import { mainBlue, white } from "../constants";
 import HomeIcon from "./HomeIcon";
 import NavItems from "./NavItems";
@@ -7,13 +8,9 @@ import NavItems from "./NavItems";
 const StyledNav = styled.nav`
   background: ${mainBlue};
   padding: 1rem;
-  opacity: 0.95;
   height: 4rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  &:hover {
-    opacity: 1;
-  }
 `;
 
 const Heading = styled.h1`
@@ -41,7 +38,9 @@ const Navbar = ({ items, ...props }) => {
   return (
     <StyledNav {...props}>
       <IconWrapper>
-        <HomeIcon href="/" />
+        <Link to="/">
+          <HomeIcon />
+        </Link>
       </IconWrapper>
       <Heading>Cool Pottery</Heading>
       <NavItems open={open} toggleOpen={toggleOpen} items={items} />
