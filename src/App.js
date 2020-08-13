@@ -1,6 +1,8 @@
 import React from "react";
-import Flexbox from "./components/Flexbox";
+import styled from "styled-components";
+import { mainBlue } from "./components/constants";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import router from "./router";
 
 const items = [
@@ -9,16 +11,22 @@ const items = [
   { name: "Gallery", href: "/gallery" },
 ];
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  background-color: ${mainBlue};
+  width: 100vw;
+`;
+
 function App() {
   return (
-    <div>
+    <Wrapper>
       <Navbar items={items} />
-      {/* <Flexbox height="150px">
-        Welcome to Cool Pottery. This site is under construction. Come back and
-        see us soon! Or send an email to coolpottery.art@gmail.com
-      </Flexbox> */}
       {router}
-    </div>
+      <Footer />
+    </Wrapper>
   );
 }
 

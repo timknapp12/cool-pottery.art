@@ -8,13 +8,9 @@ import NavItems from "./NavItems";
 const StyledNav = styled.nav`
   background: ${mainBlue};
   padding: 1rem;
-  opacity: 0.95;
   height: 4rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  &:hover {
-    opacity: 1;
-  }
 `;
 
 const Heading = styled.h1`
