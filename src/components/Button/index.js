@@ -8,7 +8,7 @@ import {
   success,
   lightBlue,
   black,
-  ButtonText,
+  StyledText,
 } from "../constants";
 
 const StyledButton = styled.button`
@@ -32,7 +32,7 @@ const kindsMap = {
 
 const Button = ({ children, kind = "Primary", ...props }) => (
   <StyledButton color={kindsMap[kind]} {...props}>
-    <ButtonText>{children}</ButtonText>
+    <StyledText>{children}</StyledText>
   </StyledButton>
 );
 

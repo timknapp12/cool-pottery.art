@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { mainBlue, white, ButtonText } from "../constants";
+import { mainBlue, white, StyledText } from "../constants";
 
 const Wrapper = styled.div`
   background: ${mainBlue};
@@ -11,14 +11,15 @@ const Wrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   color: ${white};
+  border-top: 1px solid ${white};
 `;
-
+// TODO: add hrefs
 const Footer = () => (
   <Wrapper>
-    <ButtonText>
+    <StyledText>
       Shop: <a>coolpottery.art</a> on Instagram
-    </ButtonText>
-    <ButtonText>Contact: coolpottery.art@gmail.com</ButtonText>
+    </StyledText>
+    <StyledText>Contact: coolpottery.art@gmail.com</StyledText>
   </Wrapper>
 );
 
