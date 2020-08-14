@@ -12,7 +12,7 @@ const Wrapper = styled(Flexbox)`
 `;
 
 const TextWrapper = styled(Flexbox)`
-  border: 3px solid ${white};
+  border: 2px solid ${white};
   padding: 2rem;
   border-radius: 8px;
 `;
