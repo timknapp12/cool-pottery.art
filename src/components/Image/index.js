@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 const StyledImage = styled.img`
   width: ${(props) => (props.size ? props.size : "auto")};
-  height: ${(props) => (props.size ? props.size : "auto")};
 `;
 
 const Image = ({ src, alt, size = "8rem", ...props }) => (
@@ -17,5 +16,7 @@ Image.propTypes = {
   /** alt text for the image */
   alt: PropTypes.string.isRequired,
   /** height and width for the image */
-  size: Proptypes.string,
+  size: PropTypes.string,
 };
+
+export default Image;
