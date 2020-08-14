@@ -17,11 +17,11 @@ export const success = "#129B5B";
 
 export const black = "#0D1E16";
 
-const ButtonP = styled.p`
+const StyledP = styled.p`
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   letter-spacing: 0.1rem;
   color: ${white};
 `;
 
-export const ButtonText = ({ children }) => <ButtonP>{children}</ButtonP>;
+export const StyledText = ({ children }) => <StyledP>{children}</StyledP>;

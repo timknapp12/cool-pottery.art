@@ -11,6 +11,7 @@ const StyledNav = styled.nav`
   height: 4rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
+  border-bottom: 1px solid ${white};
 `;
 
 const Heading = styled.h1`

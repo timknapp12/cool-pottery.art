@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Flexbox from "../Flexbox";
 import { Link } from "react-router-dom";
-import { ButtonText, white, mainBlue } from "../constants";
+import { StyledText, white, mainBlue } from "../constants";
 import HamburgerIcon from "./HamburgerIcon";
 
 const Wrapper = styled.div`
@@ -52,7 +52,7 @@ const NavItems = ({ items, open, toggleOpen, ...props }) => {
           <Dropdown flexDirection="column">
             {items.map((item) => (
               <StyledLink to={item.href} key={item.name}>
-                <ButtonText>{item.name}</ButtonText>
+                <StyledText>{item.name}</StyledText>
               </StyledLink>
             ))}
           </Dropdown>
@@ -65,7 +65,7 @@ const NavItems = ({ items, open, toggleOpen, ...props }) => {
             to={item.href}
             style={{ marginLeft: "1.5rem" }}
           >
-            <ButtonText>{item.name}</ButtonText>
+            <StyledText>{item.name}</StyledText>
           </StyledLink>
         ))}
       </WideScreenMenuItems>
