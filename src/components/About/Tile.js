@@ -2,25 +2,30 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Image from "../Image";
-import { StyledText } from "../constants";
+import { StyledText, white, black } from "../constants";
 
 const Wrapper = styled.div`
   display: flex;
-  height: 30%;
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
-  background: white;
+  background: ${white};
+  height: 100%;
+  max-width: ${(props) => (props.size ? props.size : "auto")};
+  border-radius: 8px;
 `;
 
 const Title = styled(StyledText)`
   font-weight: 700;
-  color: black;
+  color: ${black};
 `;
 
-const Tile = ({ src, alt, title = "", description = "", ...props }) => (
-  <Wrapper {...props}>
-    <Image src={src} alt={alt} />
+const Tile = ({ src, alt, title = "", description = "", size, ...props }) => (
+  <Wrapper size={size} {...props}>
+    <Image src={src} alt={alt} size={size} />
+    {title}
+    <br />
+    {description}
   </Wrapper>
 );
 
