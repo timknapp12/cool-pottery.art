@@ -8,12 +8,23 @@ import seven from "../../assets/7.jpg";
 import eight from "../../assets/8.jpg";
 import nine from "../../assets/9.jpg";
 import ten from "../../assets/10.jpg";
-// import eleven from "../../assets/11.jpg";
+import eleven from "../../assets/11.jpg";
 import twelve from "../../assets/12.jpg";
 import thirteen from "../../assets/13.jpg";
 import fourteen from "../../assets/14.jpg";
 import fifteen from "../../assets/15.jpg";
 import sixteen from "../../assets/16.jpg";
+import seventeen from "../../assets/17.jpg";
+import eighteen from "../../assets/18.jpg";
+// import nineteen from "../../assets/19.jpg";
+import twenty from "../../assets/20.jpg";
+import twentyOne from "../../assets/21.jpg";
+import twentyTwo from "../../assets/22.jpg";
+import twentyThree from "../../assets/23.jpg";
+import twentyFour from "../../assets/24.jpg";
+import twentyFive from "../../assets/25.jpg";
+import twentySix from "../../assets/26.jpg";
+import twentySeven from "../../assets/27.jpg";
 
 export default [
   {
@@ -56,10 +67,10 @@ export default [
     src: ten,
     alt: "pot",
   },
-  //   {
-  //     src: eleven,
-  //     alt: "pot",
-  //   },
+  {
+    src: eleven,
+    alt: "pot",
+  },
   {
     src: twelve,
     alt: "pot",
@@ -78,6 +89,50 @@ export default [
   },
   {
     src: sixteen,
+    alt: "pot",
+  },
+  {
+    src: seventeen,
+    alt: "pot",
+  },
+  {
+    src: eighteen,
+    alt: "pot",
+  },
+  // {
+  //   src: nineteen,
+  //   alt: "pot",
+  // },
+  {
+    src: twenty,
+    alt: "pot",
+  },
+  {
+    src: twentyOne,
+    alt: "pot",
+  },
+  {
+    src: twentyTwo,
+    alt: "pot",
+  },
+  {
+    src: twentyThree,
+    alt: "pot",
+  },
+  {
+    src: twentyFour,
+    alt: "pot",
+  },
+  {
+    src: twentyFive,
+    alt: "pot",
+  },
+  {
+    src: twentySix,
+    alt: "pot",
+  },
+  {
+    src: twentySeven,
     alt: "pot",
   },
 ];
