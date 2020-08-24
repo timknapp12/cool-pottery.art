@@ -13,13 +13,30 @@ const Wrapper = styled.div`
   color: ${white};
   border-top: 1px solid ${white};
 `;
-// TODO: add hrefs
+
+const StyledLink = styled.a`
+  text-decoration: none;
+  color: ${white};
+`;
+
 const Footer = () => (
   <Wrapper>
     <StyledText>
-      Shop: <a>coolpottery.art</a> on Instagram
+      Shop:{" "}
+      <StyledLink
+        target="_blank"
+        href="https://www.instagram.com/coolpottery.art/"
+      >
+        coolpottery.art
+      </StyledLink>{" "}
+      on Instagram
     </StyledText>
-    <StyledText>Contact: coolpottery.art@gmail.com</StyledText>
+    <StyledText>
+      Contact:{" "}
+      <StyledLink href="mailto:coolpottery.art@gmail.com">
+        coolpottery.art@gmail.com
+      </StyledLink>
+    </StyledText>
   </Wrapper>
 );
 

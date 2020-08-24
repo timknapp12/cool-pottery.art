@@ -63,7 +63,7 @@ const NavItems = ({ items, open, toggleOpen, ...props }) => {
           <StyledLink
             key={item.name}
             to={item.href}
-            style={{ marginLeft: "1.5rem" }}
+            style={{ marginRight: "1rem" }}
           >
             <StyledText>{item.name}</StyledText>
           </StyledLink>
