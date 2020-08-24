@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import Grid from "../Grid";
-import Flexbox from "../Flexbox";
 import Image from "../Image";
 import data from "./data";
 
