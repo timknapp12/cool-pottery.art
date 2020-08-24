@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Image from "../Image";
-import { StyledText, white, black } from "../constants";
+import { white } from "../constants";
 
 const Wrapper = styled.div`
   display: flex;
@@ -13,11 +13,6 @@ const Wrapper = styled.div`
   height: 100%;
   max-width: ${(props) => (props.size ? props.size : "auto")};
   border-radius: 8px;
-`;
-
-const Title = styled(StyledText)`
-  font-weight: 700;
-  color: ${black};
 `;
 
 const Tile = ({ src, alt, title = "", description = "", size, ...props }) => (
