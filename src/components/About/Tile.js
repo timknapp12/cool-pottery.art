@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   height: 100%;
   max-width: ${(props) => (props.size ? props.size : "auto")};
   border-radius: 8px;
+  margin-top: 2rem;
 `;
 
 const Tile = ({ src, alt, title = "", description = "", size, ...props }) => (
