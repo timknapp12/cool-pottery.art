@@ -19,6 +19,7 @@ const TextWrapper = styled(Flexbox)`
   border: 2px solid ${white};
   padding: 2rem;
   border-radius: 8px;
+  margin-bottom: 2rem;
 `;
 
 const StyledLink = styled.a`
