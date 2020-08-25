@@ -2,6 +2,7 @@
   "name": "cool-pottery.art",
   "version": "0.1.0",
   "private": true,
+  "main": "./server/index.js",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/user-event": "^7.2.1",
@@ -43,5 +44,6 @@
     "@storybook/react": "^5.3.18",
     "@testing-library/react": "^9.5.0",
     "husky": "^4.2.3"
-  }
+  },
+  "proxy": "http://localhost:8040"
 }
